@@ -1,0 +1,347 @@
+<!-- MAIN PAGE STYLES -->
+<page-meta
+  page-style="background-color: #bbc9d7"
+>
+</page-meta>
+
+<!--БАННЕР-->
+<view style='width: {{banner.length * 100}}vw' class="banner flex-row">
+  
+  <image animation="{{animation}}" src='{{banner[0].background}}'></image>
+  <image src='{{banner[1].background}}'></image>
+  <image src='{{banner[2].background}}'></image>
+
+
+
+    <!-- <text class='banner-name'>Largest Chinese TableTennis Tournament</text>
+    <text class='banner-time opa'>21-25 July</text> -->
+
+  <!-- <view class='banner-photos'>
+    <image  src='{{banner.background1}}'></image>
+  </view> -->
+</view>
+
+
+
+
+
+<!--NAV-BAR-->
+
+<view class='nav-bar'>
+
+    <view>
+      <image src='/img/svg/nav-icon1.svg'></image>
+      <text>Регистрация на турнир</text>
+    </view>
+
+    <view>
+      <image src='/img/svg/nav-icon2.svg'></image>
+      <text>Найти тренера</text>
+    </view>
+
+    <view>
+      <image src='/img/svg/nav-icon3.svg'></image>
+      <text>Магазин</text>
+    </view>
+
+    <view>
+      <image src='/img/svg/nav-icon4.svg'></image>
+      <text>Детские тренировки</text>
+    </view>
+
+</view>
+
+
+
+
+
+
+<!-- ПОСЛЕДНИЕ НОВОСТИ -->
+
+<view class='last-news'>
+
+  <view class='news-head'> <!-- заголовок блока новостей -->
+    <text>Последние новости</text>
+    <navigator bindtap='headText' id='test'>Все</navigator>
+  </view>
+
+
+
+  <view class='news-list'> <!-- блок с новостями -->
+
+    <view wx:for="{{news}}"> <!-- новость -->
+      <image src="{{item.img}}"></image>
+
+      <view class='new-descript'>
+        <text class='new-title h15'>{{item.title}}</text>
+        <text class='new-data'>{{item.date}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+
+
+
+
+
+
+<!-- ТУРНИРЫ -->
+
+<view class='tournaments'>
+
+  <view class='tournaments-head'>
+    <text>Турниры</text>
+    <navigator>Все</navigator>
+  </view>
+
+  <view class='tournaments-tabs'>
+
+    <view class='tournament-regist'>
+      <image src='/img/svg/tournaments-icon1.svg'></image>
+      <text bindtap="tournamentTabs">Регистрация</text>
+    </view>
+
+    <view class='tournament-live'>
+      <image src='/img/svg/tournaments-icon2.svg'></image>
+      <text>Live</text>
+    </view>
+
+    <view class='tournament-results'>
+      <image src='/img/svg/tournaments-icon3.svg'></image>
+      <text>Результаты</text>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+
+<!-- разрыв (серый фон для полосы фильтров должен распространяться и на padding контейнера, поэтому прерываем контейнер и делаем линию отдельным элементом на странице)-->
+
+  <view class='registration-days'>
+    <view>
+      <navigator>Подходящие/</navigator>
+      <navigator>Все</navigator>
+    </view>
+    
+    <navigator>{{tournamentsRegion.region}}</navigator>
+  </view>
+
+  <view class='day-tabs'>
+    <text>{{tournamentsDate.date1}}</text>
+    <text>{{tournamentsDate.date2}}</text>
+    <text>{{tournamentsDate.date3}}</text>
+    <image src='/img/svg/icon-awesome-calendar-alt.svg'></image>
+  </view>
+
+<!-- разрыв -->
+
+
+
+
+
+<view class='tournaments-part2'>
+
+  <view wx:for="{{tournaments}}" class='tournaments-part2-line' bindtap='navToSingle'> <!-- использовать как шаблон -->
+  
+    <text>{{item.time}}</text>
+    <text>{{item.rate}}</text>
+    <text>{{item.clubname}}</text>
+    <view>
+      <image src='/img/svg/players-icon1.svg'></image>
+      <text>{{item.player}}</text>
+    </view>
+    <view>
+      <image src='/img/svg/players-icon2.svg'></image>
+      <text>{{item.comment}}</text>
+    </view>
+
+  </view>
+  
+</view>
+
+
+
+
+
+
+
+ <!-- ТРЕНЕРЫ -->
+
+<view class='trainers-block container'>
+
+  <view class='.head-title'>
+    <text>Тренеры</text>
+    <navigator>Все</navigator>
+  </view>
+
+  <view class='trainers-list flex-row'> <!-- список тренеров -->
+
+
+    <view wx:for="{{trainers}}" class='trainer-card'> <!-- шаблон карточки тренера -->
+
+      <image class='trainer-photo' src='{{item.photo}}'></image> <!--фото-->
+
+      <view class='trainer-rate green-sticker'> <!--ретинг-->
+
+        <image src='/img/svg/rate-icon.svg'></image>
+        <text>{{item.rate}}</text>
+
+      </view>
+
+      <text class='trainer-name bold'>{{item.name.name}}</text> <!--имя-->
+
+      <view class='trainer-location flex-row'> <!--место-->
+
+        <image src='/img/svg/map-point-icon.svg'></image>
+        <text>{{item.location}}</text>
+
+      </view>
+
+      <text class='trainer-prise yellow-sticker'>{{item.price}}/hour</text> <!--цена-->
+
+    </view>
+
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ДЕТСКИЕ ТРЕНИРОВКИ (НА ОСНОВЕ "ТУРНИРЫ") -->
+
+
+<view class='tournaments children-trainings'>
+
+  <view class='tournaments-head children-trainings-head'>  <!-- шапка сонтейнера "детские трериновки" -->
+    <text>Детские тренировки</text>
+    <navigator>Все</navigator>
+  </view>
+
+</view>
+
+
+
+
+
+<!-- разрыв (серый фон для полосы фильтров по времени должен распространяться и на padding контейнера, поэтому прерываем контейнер и делаем линию отдельным элементом на странице) -->
+
+  <view class='day-tabs'>
+    <text>Сегодня</text>
+    <text>{{childrenTrainingsTime.date}}</text> <!-- вчера -->
+    <text>{{childrenTrainingsTime.date}}</text> <!-- позавчера -->
+    <image src='/img/svg/icon-awesome-calendar-alt.svg'></image>  <!-- иконка календарика -->
+  </view>
+
+<!-- разрыв -->
+
+
+
+
+
+
+
+<view class='children-trainings-part2'>
+
+  <view wx:for="{{childrenTrainings}}" class='children-trainings-part2-line'> <!-- информация о тренировке (использовать как шаблон) -->
+  
+    <text>{{item.time}}</text> <!-- время тренировки -->
+    <text>{{item.duration}}</text> <!-- продолжительность тренировки -->
+
+    <view class='children-club flex-column'> <!-- инфа о клубе и тренере -->
+      <text>{{item.clubname}}</text>
+
+      <view class='children-trainer flex-row'> <!-- тренер -->
+        <image src='/img/svg/trainer-con.svg'></image>
+        <text class='.low-light'>{{item.trainerName}}</text>
+      </view>
+    </view>
+
+    <view class='children-count flex-row'> <!-- кол-во человек -->
+      <image src='/img/svg/player-icon.svg'></image>
+      <text>{{item.playersCount}}</text>
+    </view>
+
+    <text class='.yellow-sticker'>{{item.price}}</text> <!-- цена занятия -->
+
+  </view>
+
+  
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ПОСЛЕДНИЕ ФОТО -->
+
+<view class='last-photos container'>
+
+  <view class='head-title'> <!-- хэдер блока -->
+    <text>Последние фото</text>
+    <navigator>Все</navigator>
+  </view>
+
+  <view class='last-photos-list flex-row'> <!-- список карточек -->
+
+    <view wx:for="{{lastPhotos}}" class='last-photos-card flex-column'> <!-- карточка фото -->
+      <image src='{{item.photo}}'></image>
+
+      <view class='flex-row'> <!-- счетчики лайков и коментариев -->
+        <view class='flex-row'>
+         <image src='/img/svg/like-icon.svg'></image>
+         <text>{{item.like}}</text> 
+        </view>
+
+        <view class='flex-row'>
+         <image src='/img/svg/comment-icon.svg'></image>
+         <text>{{item.comment}}</text> 
+        </view>
+      </view>
+
+      <text>{{item.description}}</text>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+
+
+
+
+<!-- ССЫЛКИ на аккаунты -->
+
+<view class='acc-links'>
+  <text class='acc-links-head'>{{accLinks.head}}</text>
+  <view class='acc-links-list'>
+      <image src='{{accLinks.acc1.img}}'></image>
+      <image src='{{accLinks.acc2.img}}'></image>
+  </view>
+</view>

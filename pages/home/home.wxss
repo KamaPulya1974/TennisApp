@@ -1,0 +1,491 @@
+/* BANNER */
+
+.banner {
+  /* background-image: url('../img/banner.png'); */
+  /* flex-wrap: nowrap; */
+  height: 47.2vw;
+}
+  .banner image {
+    width: 100vw;
+    height: 47.2vw;
+
+    position: absolute;
+  }
+    .banner image:nth-child(1) {
+      
+    }
+    .banner image:nth-child(2) {
+      opacity: 0;      
+    }
+    .banner image:nth-child(3) {
+      opacity: 0;
+    }
+
+/* .banner-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  text-align: center;
+  top: 6vw;
+  left: 65vw;
+} */
+/* view {
+  padding: 0;
+  margin: 0;
+} */
+
+/* .banner-name {
+  color: white;
+  font-family: "SF Pro";
+}
+.banner-time {
+  color: rgb(255, 136, 0);
+  margin-top: 3vw;
+}
+
+
+.banner-photos > image {
+  width: 100vw;
+  height: 47.2vw;
+} */
+
+
+
+
+/* NAV-BAR */
+
+
+
+
+.nav-bar {
+  background-color: #BBC9D7;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.7vw 2.7vw 0 2.7vw;
+}
+
+.nav-bar > view { /* блок с иконками и подписями*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 22vw;
+  height: 22vw;
+  border-radius: 2.2vw;
+
+  background-color: #F9F9F9;
+  box-shadow: 0.2vw 0.3vw 1vw rgb(126, 129, 151), -0.2vw 0.3vw 1vw rgb(130, 132, 155);
+}
+
+.nav-bar text {
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 500;
+
+  margin-top: 1.5vw;
+}
+.nav-bar text:first-child {
+  
+}
+
+.nav-bar > view:nth-child(1) > image {
+  height: 7.4vw;
+}
+.nav-bar > view:nth-child(2) > image {
+  height: 8.8vw;
+}
+.nav-bar > view:nth-child(3) > image {
+  height: 8.3vw;
+}
+.nav-bar > view:nth-child(4) > image {
+  height: 7.7vw;
+}
+
+
+
+
+
+/* LAST NEWS */
+
+.last-news {  /* контейнер */
+  background-color: #F9F9F9;
+  border-radius: 2.2vw;
+  margin: 2.7vw 2.7vw 0 2.7vw;
+  padding: 4vw 3.7vw 1.5vw 3.7vw;
+}
+
+  .news-head { /* шапка */
+    display: flex;
+    justify-content: space-between;
+  }
+  .news-head text {
+    font-weight: bold;
+  }
+  .news-head navigator {
+    text-decoration: underline;
+    color: #55779B;
+  }
+
+
+
+  .news-list { /* блок с новостями */
+    margin-top: 5vw;
+  }
+
+
+
+    .news-list > view { /* контейнер новости */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-bottom: 2.2vw;
+    }
+      .new-descript {  /* подписи к новости */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 4vw;
+        width: 66vw;
+
+        overflow: hidden; /* Обрезаем все, что не помещается*/
+          text-overflow: ellipsis;
+      }
+        .new-title {
+          height: 11.6vw;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .new-title:first-child {
+        }
+        .new-data {
+          color: #55779B;
+          opacity: 0.5;
+          flex-shrink: 0;
+          font-size: 4vw;
+        }
+      .news-list image { /* картинка */
+        height: 16.7vw;
+        width: 16.7vw;
+        border-radius: 2.2vw;
+        flex-shrink: 0;
+      }
+
+
+
+
+
+
+
+
+
+/* ТУРНИРЫ */
+
+.tournaments {
+  background-color: #F9F9F9;
+  border-radius: 2.2vw 2.2vw 0 0;
+  margin: 2.7vw 2.7vw 0 2.7vw;
+  padding: 4vw 3.7vw 0 3.7vw;
+}
+  .tournaments-head { /* шапка */
+    display: flex;
+    justify-content: space-between;
+  }
+  .tournaments-head text {
+    font-weight: bold;
+  }
+  .tournaments-head navigator {
+    text-decoration: underline;
+    color: #55779B;
+  }
+
+  .tournaments-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4vw;
+  }
+    .tournaments-tabs > view {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 4vw;
+    }
+      .tournaments-tabs > view > image {
+        width: 3.8vw;
+        height: 5vw;
+        margin-right: 1vw;
+      }
+      .tournaments-tabs > view > text {
+        font-size: 4vw;
+        display: inline;
+        opacity: 0.5;
+      }
+  .registration-days {
+    display: flex;
+    justify-content: space-between;
+
+    color: #55779B;
+    background-color: #e9edf0;
+
+    padding: 3.3vw 3.3vw 2.3vw 3.7vw;
+    margin: 0 2.7vw 0 2.7vw;
+  }
+    .registration-days > view {
+      display: flex;
+    }
+
+  .day-tabs {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 3.3vw 3.3vw 3.3vw 3.3vw;
+    margin: 0 2.7vw 0 2.7vw;
+    background-color: #e9edf0;
+  }
+    .day-tabs > text {
+      font-size: 4vw;
+      color: #55779B;
+    }
+    .day-tabs > image {
+      width: 3.9vw;
+      height: 5vw;
+      border-radius: 0;
+    }
+
+.tournaments-part2 {
+  background-color: #F9F9F9;
+  border-radius: 0 0 2.2vw 2.2vw;
+  margin: 0 2.7vw 0 2.7vw;
+}
+  .tournaments-part2-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 3.7vw 3vw 3.7vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+  }
+
+  .tournaments-part2-line:last-child {
+    border-bottom: none;
+  }
+
+  .tournaments-part2-line text {
+    font-size: 4vw;
+  }
+  .tournaments-part2-line > text:first-child {
+    color: #FF9900;
+    font-weight: 500;
+  }
+  .tournaments-part2-line > text:nth-child(2) {
+    background: #539968;
+    border-radius: 0.7vw;
+    color: white;
+    font-weight: 700;
+    padding: 0.6vw 1.7vw 0.7vw 1.7vw;
+  }
+  .tournaments-part2-line > text:nth-child(3) {
+
+  }
+  .tournaments-part2-line > view {
+      display: flex;
+  }
+    .tournaments-part2-line > view > image {
+      width: 4.2vw;
+      height: auto;
+
+      margin-right: 1.1vw;
+    }
+
+
+
+
+
+
+/* ТРЕНЕРЫ */
+
+
+/* .trainers-list {
+  background-color: black;
+} */
+
+
+.trainers-block {
+  overflow: hidden;
+}
+.trainers-list {
+  padding: 2.2vw 0 2.2vw 0;
+}
+  .trainer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2.2vw;
+  }
+    .trainer-photo {
+      width: 26vw;
+      height: 26vw;
+
+      border-radius: 100%;
+      background: linear-gradient(to right bottom, #51C276, #3783D7);
+      padding: 1vw;
+    }
+    .trainer-rate {
+      margin-top: -4vw;
+    }
+      .trainer-rate > image {
+      }
+      .trainer-rate > text {
+
+      }
+    .trainer-name {
+      margin-top: 1.5vw;
+    }
+    .trainer-location > image {
+      height: 5vw;
+      width: 2.2vw;
+      flex-shrink: 0;
+      margin-top: 1.5vw;
+      margin: 0 1vw 0 0;
+    }
+    .trainer-location > text {
+      font-size: 3.5vw;
+    }
+    .trainer-prise {
+      margin-top: 3vw;
+    }
+
+
+
+
+/* ДЕТСКИЕ ТРЕНИРОВКИ */
+
+.children-trainings-head {
+  padding-bottom: 4vw;
+}
+
+.children-trainings-part2 {
+  background-color: #F9F9F9;
+  border-radius: 0 0 2.2vw 2.2vw;
+  margin: 0 2.7vw 0 2.7vw;
+}
+
+.children-trainings-part2-line {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 3.7vw 2vw 3.7vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+}
+.children-trainings-part2-line:last-child {
+  border-bottom: none;
+}
+  .children-club {
+    align-items: flex-start !important;
+  }
+    .children-trainer {
+
+    }
+      .children-trainer > image {
+        width: 3vw;
+        height: 5vw;
+        flex-shrink: 0;
+        margin-right: 1vw;
+      }
+      .children-trainer > text {
+        font-size: 3vw;
+      }
+
+  .children-count {
+
+  }
+    .children-count > image {
+      width: 3.1vw;
+      height: 5vw;
+      flex-shrink: 0;
+      margin-right: 1vw;
+    }
+
+
+
+
+
+
+
+
+
+/* ПОСЛЕДНИЕ ФОТО */
+
+.last-photos {
+  margin-bottom: 2.7vw !important;
+}
+
+.last-photos-list {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+
+.last-photos-card {
+  margin: 5vw 2.2vw 4.5vw 0;
+  align-items: flex-start;
+  width: 36vw;
+}
+  .last-photos-card > image {
+    width: 36vw;
+    height: 36vw;
+  }
+
+  .last-photos-card > view {
+    margin-top: 2vw;
+  }
+    .last-photos-card > view > view {
+      margin-right: 2vw;
+    }
+    .last-photos-card > view > view > image {
+      width: 4vw;
+      height: 4vw;
+      flex-shrink: 0;
+      margin-right: 0.3vw;
+    }
+    .last-photos-card > view > view > text {
+      font-size: 3.6vw;
+    }
+
+  .last-photos-card > text {
+    font-size: 3.6vw !important;
+    margin-top: 1.5vw;
+  }
+
+
+
+
+
+
+/* блок с сылками на аккаунты */ 
+
+.acc-links {
+  background: linear-gradient(97.26deg, #55779B 2.71%, #539968 103.77%);
+  border-radius: 2.2vw;
+  margin: 2.7vw 2.7vw 2.7vw 2.7vw;
+  padding: 4vw 3.7vw 3.7vw 3.7vw;
+}
+  .acc-links-head {
+    font-size: 4.2vw;
+    font-weight: 600;
+    color: white;
+  }
+  .acc-links-list {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3.7vw;
+  }
+  .acc-links-list image {
+    height: 14vw;
+    width: 14vw;
+    margin-right: 3.5vw;
+    flex-shrink: 0;
+    filter: drop-shadow(0px 0.3vw 0.5vw rgba(0, 0, 0, 0.25));
+  }

@@ -1,0 +1,184 @@
+/* pages/persons/persons.wxss */
+
+
+/* ИГРОКИ */
+.players-1 {
+  border-radius: 2.2vw 2.2vw 0 0;
+  margin-bottom: 0;
+}
+  .search {
+    margin-top: 5.5vw;
+  }
+    .input > input {
+      background: rgba(85, 119, 155, 0.1);
+      border-radius: 2.2vw;
+      padding: 3.3vw 0 3.3vw 3.6vw;
+      width: 54vw;
+      margin-right: 2vw;
+    }
+    .input > input::placeholder {
+      color: #86aec7;
+    }
+    .input > image {
+      width: 4.6vw;
+      height: 4.6vw;
+    }
+
+    .search > image {
+      width: 5vw;
+      height: 4.7vw;
+    }
+
+
+
+
+.sortings {
+  background-color: #E9ECF0;
+  padding: 4.5vw 4.2vw 4.5vw 4.2vw;
+  margin: 0 2.2vw 0 2.2vw;
+  color: #86aec7;
+  justify-content: flex-start;
+}
+  .sortings > view {
+    margin-right: 20vw;
+  }
+  .sortings > text:nth-child(2) {
+    margin-right: 16vw;
+  }
+  .sortings > text:nth-child(3) {
+    margin-right: 11vw;
+  }
+
+    .sortings > view > text {
+      margin-right: 0.3vw;
+    }
+    .sortings > view > image {
+      width: 2.2vw;
+      height: 2.2vw;
+    }
+
+
+
+
+
+.players-2 {
+  padding: 0;
+  margin-top: 0;
+  border-radius: 0 0 2.2vw 2.2vw;
+}
+  .player {
+    padding: 1.5vw 4.2vw 1.5vw 4.2vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    background-color: #F9F9F9;
+    /* padding: 4.5vw 4.2vw 4.5vw 4.2vw; */
+  }
+  .player:last-child {
+    border-radius: 0 0 2.2vw 2.2vw;
+  }
+
+    .arrow {
+    }
+    .arrow > text {
+      margin-right: 0.5vw;
+    }
+    .arrow > image {
+      width: 2.7vw;
+      height: 2.7vw;
+      filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
+    }
+
+    .player-user > image {
+      width: 8.9vw;
+      height: 8.9vw;
+      margin-right: 2.2vw;
+      border-radius: 100%;
+      background: linear-gradient(to right bottom, #51C276, #3783D7);
+      padding: 0.5vw;
+    }
+
+  .player-rate {
+    background: radial-gradient(70.23% 91.82% at 17.11% 50%,     #51C276 0%, #47A99D 38.39%, #3783D7 100%);
+
+  }
+    .player-rate > image {
+      width: 3vw;
+      height: 3vw;
+    }
+
+
+  .right-arrow {
+    width: 2vw;
+    height: 3.6vw;
+    margin-left: -5vw;
+  }
+
+
+
+
+
+  /* ТРЕНЕРЫ */
+
+
+.trainers {
+  overflow: hidden;
+}
+  .trainer-card {
+    margin-right: 11vw;
+  }
+    .gradient-rate {
+      margin-top: -3vw;
+    }
+
+    .club-name {
+    }
+
+
+
+
+
+
+/* ПОСЛЕДНИЕ ПОБЕДИТЕЛИ */
+
+.last-winners {
+  overflow: hidden;
+}
+
+.last-winner-card {
+  margin-right: 7vw;
+
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+.winners-metal-line {
+  border-radius: 1.8vw;
+  height: 3.6vw;
+  width: 2vw;
+  flex-grow: 10;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.last-winners-list .gradient-rate {
+  margin-top: 1.5vw;
+}
+
+
+.last-winners-metal-line-gold > text {
+  margin: 0 5.5vw 0 5.5vw;
+}
+.last-winners-metal-line-gold > view {
+  background: linear-gradient(90deg, #FFCE31 -0.72%, #FFEBA9 37.05%, #FBC53C 54.33%, #FFC50C 69.44%, #FFCE31 102.9%);
+}
+
+.last-winners-metal-line-silver > text {
+  margin: 0 5.5vw 0 5.5vw;
+}
+.last-winners-metal-line-silver > view {
+  background: linear-gradient(90deg, #C4D1DD 0%, #E9F2FA 44.79%, #E3EBF1 55.98%, #E1ECF0 100%);
+}
+
+.last-winners-metal-line-bronze > text {
+  margin: 0 5.5vw 0 5.5vw;
+}
+.last-winners-metal-line-bronze > view {
+  background: linear-gradient(90deg, #DDAA87 -1.21%, #E89761 56.27%, #FFE3D0 73.46%, #D3976E 101.93%);
+}

@@ -1,0 +1,188 @@
+<!-- MAIN PAGE STYLES -->
+<page-meta
+  page-style="background-color: #EFF0F7"
+>
+</page-meta>
+<!-- #EFF0F7 -->
+
+<!-- БЛОК ПЕРВИЧНОЙ ИНФОРМАЦИИ -->
+
+
+  <!-- ВРЕМЯ ТУРНИРА -->
+<view class="tournament-main container">
+
+  <view class='flex-row'>
+    <text style='font-weight: 700' class='green-sticker h14'>{{head.rate.rate1}}</text>
+    <text class='h18'>{{head.clueName.clueName1}}</text>
+    <text class='low-dark h15'>{{head.time.time1}}</text>
+  </view>
+
+  <view class='tournament-info margin-top'>
+
+    <view>
+      <image src='/img/singleTournament/calendar.svg'></image>
+      <text class='light-blue'>{{info.date.date1}}</text>
+    </view>
+
+    <view>
+      <image src='/img/singleTournament/clock.svg'></image>
+      <text class='light-blue'>{{info.time.time1}}</text>
+      <text>{{info.warmup.warmup1}}</text>
+    </view>
+    
+    <view>
+      <image src='/img/singleTournament/player.svg'></image>
+      <text>{{info.players.registred.registred1}}</text>
+      <text class='light-blue'>{{info.players.max.max1}}</text>
+    </view>
+    
+    <view>
+      <image src='/img/singleTournament/yuan.svg'></image>
+      <text class='light-blue'>{{info.price.price1}}</text>
+    </view>
+    
+  </view>
+
+
+
+  <!-- АДРЕС ТУРНИРА -->
+
+  <view class='tournament-adress margin-top flex-row'>
+    <view class='tournament-adress-text'>
+
+      <view>
+        <image src='/img/singleTournament/home.svg'></image>
+        <text>{{adress.clubName.clubName1}}</text>
+      </view>
+
+      <view>
+        <image src='/img/singleTournament/map-point.svg'></image>
+        <text>{{adress.adress.adress1}}</text>
+      </view>
+
+      <view>
+        <image src='/img/singleTournament/telephone.svg'></image>
+        <text>{{adress.phone.phone1}}</text>
+      </view>
+      
+    </view>
+
+    <image src='/img/singleTournament/Dynamic/Map.png' class='margin-top'></image>
+
+  </view>
+
+  <button class='tournament-register-button margin-top'>报名</button>
+</view>
+
+
+
+
+
+
+
+<!-- БЛОК ВТОРИЧНОЙ ИНФОРМАЦИИ -->
+
+<view class='tournament-description container flex-column'>
+
+  <text class='tournament-description-head bold h17'>Информация о турнире</text>
+
+  <text class='low-dark margin-top h14'>{{description.system.system1}}</text>
+
+  <text class='low-dark margin-top h14'>{{description.prize.prize1}}</text>
+
+</view>
+
+
+
+
+
+
+
+
+<!-- ЗАРЕГИСТРИРОВАННЫЕ УЧАСТНИКИ -->
+
+<view class='registred-players container'>
+
+  <text class='bold h17'>Зарегистрированные участники</text>
+
+
+  <view class='players-list flex-row'> <!-- каточка участника -->
+
+    <view wx:for="{{registredPlayers}}" class="player flex-row">
+      <image src='{{item.img}}'></image>
+
+      <view class='flex-column'>
+        <text class='h15'>{{item.name}}</text>
+        <view class='flex-row rate gradient-rate'>
+          <image src='/img/svg/rate-icon.svg'></image>
+          <text class='h13'>{{item.rate}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+
+<!-- <view class='opa'>
+  <text wx:for="{{array}}">{{index}}: {{item.message}}</text>
+</view> -->
+
+
+
+
+
+<!-- КОММЕНТАРИИ -->
+
+<view class='comments container'>
+
+  <text class='bold h17'>Комментарии ({{comments.length}})</text>
+
+  <view class='comments-list'> <!-- список коментариев -->
+
+    <view wx:for="{{comments}}" class='comment flex-row margin-top'> <!-- шаблон коментария -->
+
+      <view class='left_comment-side flex-column'> <!-- левая часть коментария (без кнопок) -->
+
+        <view class='player-info flex-row'> <!-- инфо об игроке -->
+        
+          <image src='{{item.img}}'></image> <!-- аватарка -->
+
+          <view class='flex-column'> <!-- имя игрока и дата публикации -->
+            <text class='h15 low-dark'>{{item.name}}</text>
+            <text class='h13 low-light'>{{item.date}}</text>
+          </view>
+
+        </view>
+
+        <text class='player-comment h15'>{{item.content}}</text> <!-- текст коментария -->
+
+      </view>
+
+      <view class='buttons flex-column shadow'> <!-- кнопки справа -->
+
+        <image src='/img/svg/plus.svg'></image>
+
+        <text class='counter'>0</text>
+
+        <image src='/img/svg/minus.svg'></image>
+
+      </view>
+
+    </view>
+
+
+
+    <!-- "оставить коментарий" -->
+    <view class='post-comment margin-top flex-row'>
+      <image src='/img/singleTournament/Dynamic/User photo.png'></image>
+      <textarea class='h16' placeholder="Add a comment…"></textarea>
+    </view>
+
+    <!-- кнопка send -->
+    <view class='send-button flex-row margin-top'>
+      <button class='h16'>Send</button>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,220 @@
+<page-meta
+  page-style="background-color: #BBC9D7"
+>
+</page-meta>
+
+
+
+
+
+
+<!-- ИГРОКИ -->
+<view class='players-1 container'>
+
+  <view class='head-title'>
+    <text>Игроки</text>
+    <navigator>Все</navigator>
+  </view>
+
+  <view class='search flex-row'>
+
+    <view class='input flex-row'>
+      <input placeholder="姓名" class='blue h15'></input>
+      <image src='/img/persons/search.svg'></image>
+    </view>
+
+    <image src='/img/persons/filters.svg' class='filtres'></image>
+
+  </view>
+
+</view>
+
+<!-- разрыв -->
+<view class='sortings flex-row h15'>
+    <view class='flex-row'>
+      <text>#</text>
+      <image src='/img/persons/▲.svg'></image>
+    </view>
+    <text>姓名</text>
+    <text>城市</text>
+    <text>评级</text>
+  </view>
+<!-- разрыв -->
+
+<view class='players-2 container'>
+
+  <view  wx:for="{{players}}" class='player flex-row h15'> <!-- шаблон линии игрока -->
+
+    <view class='arrow flex-row'>
+      <text>{{index}}</text>
+      <image src='/img/persons/▲.svg'></image>
+    </view>
+
+    <view class="player-user flex-row">
+      <image src='/img/persons/dynamic/user-photo.png'></image>
+      <text class='dark-blue bold'>{{item.name}}</text>
+    </view>
+
+    <text class='blue player-city'>{{item.city}}</text>
+
+    <view class='player-rate green-sticker flex-row'>
+      <image src='/img/persons/rate.svg'></image>
+      <text>{{item.rate}}</text>
+    </view>
+
+    <image class='right-arrow' src='/img/persons/right-arrow.svg'></image>
+
+  </view>
+
+</view>
+
+
+
+
+
+
+<!-- ТРЕНЕРЫ -->
+<view class='trainers container'>
+
+  <view class='head-title'>
+    <text>Тренеры</text>
+    <navigator>Все</navigator>
+  </view>
+
+  <view class='trainers-list flex-row'>
+
+    <view  wx:for="{{trainers}}" class='trainer-card margin-top flex-column'> <!-- шаблон карточки тренера -->
+      <image class='avatar' src='{{item.photo}}'></image>
+
+      <view class='gradient-rate flex-row'>
+        <image src='/img/svg/rate-icon.svg'></image>
+        <text>{{item.rate}}</text>
+      </view>
+
+      <text class='margin-top-10 bold'>{{item.name}}</text>
+
+      <view class='margin-top-10 flex-row'>
+        <image class='map-pointer' src='/img/svg/map-point-icon.svg'></image>
+        <text style='color: #23719F80' class='h12 club-name light-blue'>{{item.club}}</text>
+      </view>
+
+      <view class='margin-top-10 flex-row'>
+
+        <view class='margin-right-8 flex-row'>
+          <image class='grade-star' src='/img/svg/grade-icon.svg'></image>
+          <text class='h12'>{{item.grade}}</text>
+        </view>
+
+        <view class=' flex-row'>
+          <image class='comment-icon' src='/img/svg/comment-icon.svg'></image>
+          <text class='h12'>{{item.comments}}</text>
+        </view>
+
+      </view>
+
+      <view class='margin-top-10 flex-row'>
+        <text class='yellow-sticker h14 margin-right-8'>{{item.price}}¥/h</text>
+        <image class='children-icon' src='/img/svg/Kids icon.svg'></image>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+
+<!-- ПОСЛЕДНИЕ ПОБЕДИТЕЛИ -->
+<view class='last-winners container'>
+
+  <view class='head-title'>
+    <text>Последние победители</text>
+    <navigator>Все</navigator>
+  </view>
+
+
+
+
+  <!-- золотой хэдер -->
+  <view class='last-winners-metal-line-gold margin-top flex-row'>
+    <view class='winners-metal-line'></view> <!-- полоса -->
+    <text class='h15 weight-700'>第一名</text>
+    <view class='winners-metal-line'></view> <!-- полоса -->
+  </view>
+
+  <!-- блок карточек победителей золото -->
+  <view class='last-winners-list flex-row margin-top-10'>
+    <!-- карточка победителя -->
+    <view class='last-winner-card flex-column' wx:for="{{lastWinners.gold}}">
+      <image class='avatar' src='{{item.photo}}'></image>
+      <text class='weight-700 h12 margin-top-5'>{{item.name}}</text>
+      <view class='gradient-rate'>
+        <image src='/img/svg/rate-icon.svg'></image>
+        <text>{{item.rate}}</text>
+      </view>
+      <text class='weight-700 h12 margin-top-5'>{{item.time}}</text>
+      <text class='h12 dark-blue margin-top-5'>{{item.club}}</text>
+    </view>
+  </view>
+
+
+
+
+
+  <!-- серебряный хэдер -->
+  <view class='last-winners-metal-line-silver margin-top flex-row'>
+    <view class='winners-metal-line'></view> <!-- полоса -->
+    <text class='h15 weight-700'>第二名</text>
+    <view class='winners-metal-line'></view> <!-- полоса -->
+  </view>
+
+  <!-- блок карточек победителей серебро -->
+  <view class='last-winners-list flex-row margin-top-10'>
+    <!-- карточка победителя -->
+    <view class='last-winner-card flex-column' wx:for="{{lastWinners.silver}}">
+      <image class='avatar' src='{{item.photo}}'></image>
+      <text class='weight-700 h12 margin-top-5'>{{item.name}}</text>
+      <view class='gradient-rate'>
+        <image src='/img/svg/rate-icon.svg'></image>
+        <text>{{item.rate}}</text>
+      </view>
+      <text class='weight-700 h12 margin-top-5'>{{item.time}}</text>
+      <text class='dark-blue h12 margin-top-5'>{{item.club}}</text>
+    </view>
+  </view>
+
+
+
+
+
+  <!-- бронзовый хэдер -->
+  <view class='last-winners-metal-line-bronze margin-top flex-row'>
+    <view class='winners-metal-line'></view> <!-- полоса -->
+    <text class='h15 weight-700'>第三名</text>
+    <view class='winners-metal-line'></view> <!-- полоса -->
+  </view>
+
+  <!-- блок карточек победителей бронза -->
+  <view class='last-winners-list flex-row margin-top-10'>
+    <!-- карточка победителя -->
+    <view class='last-winner-card flex-column' wx:for="{{lastWinners.bronze}}">
+      <image class='avatar' src='{{item.photo}}'></image>
+      <text class='weight-700 h12 margin-top-5'>{{item.name}}</text>
+      <view class='gradient-rate'>
+        <image src='/img/svg/rate-icon.svg'></image>
+        <text>{{item.rate}}</text>
+      </view>
+      <text class='weight-700 h12 margin-top-5'>{{item.time}}</text>
+      <text class='h12 dark-blue margin-top-5'>{{item.club}}</text>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+
+<!-- ЛУЧШИЕ ПОБЕДЫ -->
