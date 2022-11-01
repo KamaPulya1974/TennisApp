@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/singleTournament/singleTournament",
+    "pages/persons/persons",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": false,
+    "color": "#393939",
+    "backgroundColor": "#f2f2f2",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/img/tabBar/home-off.png",
+        "selectedIconPath": "/img/tabBar/home-on.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/singleTournament/singleTournament",
+        "iconPath": "/img/tabBar/tournaments-off.png",
+        "selectedIconPath": "/img/tabBar/tournaments-on.png",
+        "text": "锦标赛"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/img/tabBar/shop1-off.png",
+        "selectedIconPath": "/img/tabBar/shop1-on.png",
+        "text": "参加"
+      },
+      {
+        "pagePath": "pages/persons/persons",
+        "iconPath": "/img/tabBar/shop2-off.png",
+        "selectedIconPath": "/img/tabBar/shop2-on.png",
+        "text": "评级"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "/img/tabBar/profile-off.png",
+        "selectedIconPath": "/img/tabBar/profile-on.png",
+        "text": "档案"
+      }
+    ]
+  }
+}
